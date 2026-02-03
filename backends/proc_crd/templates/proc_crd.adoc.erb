@@ -203,7 +203,7 @@ If the "Allowed Value(s)" is "Any" then any value allowed by the type is accepta
 <% if portfolio_design.all_in_scope_params.empty? -%>
 None
 <% else -%>
-The <%= proc_cert_model.name %> certificate has <%= portfolio_design.all_in_scope_params.size %> IN-SCOPE parameters.
+The <%= proc_cert_model.name %> certificate has <%= portfolio_design.all_in_scope_params.size %> IN-SCOPE parameter<%= portfolio_design.all_in_scope_params.size == 1 ? "" : "s" %>.
 
 [cols="4,2,1,1,2"]
 |===
@@ -230,7 +230,7 @@ doesn't cover the behavior of the associated RISC-V standard as a function of th
 <% if portfolio_design.all_out_of_scope_params.empty? -%>
 None
 <% else -%>
-The <%= proc_cert_model.name %> certificate has <%= portfolio_design.all_out_of_scope_params.size %> OUT-OF-SCOPE parameters.
+The <%= proc_cert_model.name %> certificate has <%= portfolio_design.all_out_of_scope_params.size %> OUT-OF-SCOPE parameter<%= portfolio_design.all_out_of_scope_params.size == 1 ? "" : "s" %>.
 
 [%autowidth]
 |===
